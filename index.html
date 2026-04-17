@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de Confidentialité — TravelScope</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #020816;
+    --surface: #0a1628;
+    --surface2: #0f1f3a;
+    --border: rgba(26,111,255,0.15);
+    --accent: #1a6fff;
+    --accent2: #3ecf8e;
+    --text: #e8edf5;
+    --text-sub: rgba(232,237,245,0.55);
+    --text-muted: rgba(232,237,245,0.35);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family: 'Sora', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .blob {
+    position: fixed; border-radius: 50%;
+    filter: blur(120px); pointer-events: none; z-index: 0;
+  }
+  .blob-1 { width:500px; height:500px; top:-150px; left:-100px; background:rgba(26,111,255,0.08); }
+  .blob-2 { width:400px; height:400px; bottom:-100px; right:-80px; background:rgba(62,207,142,0.06); }
+
+  header {
+    position: relative; z-index: 10;
+    padding: 60px 24px 48px;
+    text-align: center;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .logo {
+    display: inline-flex; align-items: center; gap: 12px;
+    margin-bottom: 32px;
+  }
+  .logo-icon {
+    width: 42px; height: 42px; border-radius: 50%;
+    background: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+  .logo-text { font-size: 18px; font-weight: 500; letter-spacing: -0.3px; }
+
+  .page-label {
+    display: inline-block;
+    font-size: 11px; font-weight: 500; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--accent);
+    background: rgba(26,111,255,0.1);
+    border: 0.5px solid rgba(26,111,255,0.3);
+    border-radius: 20px; padding: 4px 14px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(28px, 6vw, 42px);
+    font-weight: 400; line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+  }
+
+  h1 em { font-style: italic; color: rgba(232,237,245,0.7); }
+
+  .date-badge {
+    font-size: 12px; color: var(--text-muted);
+    letter-spacing: 0.5px;
+  }
+
+  main {
+    position: relative; z-index: 10;
+    max-width: 720px; margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .intro-card {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 48px;
+    display: flex; gap: 16px; align-items: flex-start;
+  }
+  .intro-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+  .intro-text { font-size: 14px; line-height: 1.7; color: var(--text-sub); }
+  .intro-text strong { color: var(--text); font-weight: 500; }
+
+  section { margin-bottom: 40px; }
+
+  .section-header {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .section-num {
+    width: 28px; height: 28px; border-radius: 8px;
+    background: rgba(26,111,255,0.12);
+    border: 0.5px solid rgba(26,111,255,0.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 600; color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px; font-weight: 400;
+    letter-spacing: -0.2px;
+  }
+
+  p {
+    font-size: 14px; line-height: 1.8;
+    color: var(--text-sub);
+    margin-bottom: 12px;
+  }
+  p:last-child { margin-bottom: 0; }
+
+  .info-block {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .info-block p { margin: 0; }
+
+  .item-list { list-style: none; margin: 12px 0; }
+  .item-list li {
+    font-size: 14px; line-height: 1.7;
+    color: var(--text-sub);
+    padding: 8px 0 8px 20px;
+    position: relative;
+    border-bottom: 0.5px solid rgba(255,255,255,0.04);
+  }
+  .item-list li:last-child { border-bottom: none; }
+  .item-list li::before {
+    content: '';
+    position: absolute; left: 0; top: 18px;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent); opacity: 0.6;
+  }
+  .item-list li strong { color: var(--text); font-weight: 500; }
+
+  .highlight-row {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    margin: 16px 0;
+  }
+  .highlight-pill {
+    font-size: 12px; font-weight: 500;
+    padding: 6px 14px; border-radius: 20px;
+    background: rgba(62,207,142,0.08);
+    border: 0.5px solid rgba(62,207,142,0.25);
+    color: var(--accent2);
+  }
+
+  .contact-block {
+    background: linear-gradient(135deg, rgba(26,111,255,0.08), rgba(62,207,142,0.05));
+    border: 0.5px solid rgba(26,111,255,0.2);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-top: 48px;
+    text-align: center;
+  }
+  .contact-block h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px; font-weight: 400;
+    margin-bottom: 8px;
+  }
+  .contact-block p { font-size: 13px; margin-bottom: 16px; }
+  .contact-email {
+    display: inline-block;
+    font-size: 13px; font-weight: 500;
+    color: var(--accent);
+    background: rgba(26,111,255,0.1);
+    border: 0.5px solid rgba(26,111,255,0.3);
+    border-radius: 8px; padding: 8px 20px;
+    text-decoration: none;
+  }
+
+  footer {
+    position: relative; z-index: 10;
+    text-align: center;
+    padding: 24px;
+    border-top: 0.5px solid var(--border);
+    font-size: 12px; color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    header { animation: fadeUp 0.5s ease both; }
+    main { animation: fadeUp 0.5s ease 0.1s both; }
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(14px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+  }
+
+  @media (max-width: 480px) {
+    header { padding: 40px 16px 32px; }
+    main { padding: 32px 16px 60px; }
+    .intro-card { flex-direction: column; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">🌍</div>
+    <span class="logo-text">TravelScope</span>
+  </div>
+  <div class="page-label">Politique de confidentialité</div>
+  <h1>Vos données,<br><em>notre responsabilité</em></h1>
+  <p class="date-badge">Dernière mise à jour : 17 avril 2026</p>
+</header>
+
+<main>
+
+  <div class="intro-card">
+    <div class="intro-icon">🛡️</div>
+    <div class="intro-text">
+      <strong>TravelScope</strong> est une application Android d'information voyage. Cette politique explique quelles données sont collectées, comment elles sont utilisées, et quels sont vos droits. Nous nous engageons à traiter vos données avec transparence et dans le respect du <strong>RGPD</strong>.
+    </div>
+  </div>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>Éditeur de l'application</h2>
+    </div>
+    <div class="info-block">
+      <p><strong>Développeur :</strong> Mickaël Bourcier — Développeur indépendant</p>
+      <p style="margin-top:6px;"><strong>Application :</strong> TravelScope — ID : com.travelscopev2.app</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>Données collectées</h2>
+    </div>
+    <p>TravelScope collecte un minimum de données, uniquement nécessaires au bon fonctionnement de l'application.</p>
+
+    <div class="info-block">
+      <p style="color:var(--accent2);font-weight:500;margin-bottom:10px;">✅ Stockées localement sur votre appareil uniquement</p>
+      <ul class="item-list">
+        <li>Passeport sélectionné (préférence d'affichage)</li>
+        <li>Statut premium (achat in-app validé)</li>
+        <li>Thème d'affichage (clair / sombre)</li>
+        <li>Durée d'accès temporaire obtenue via publicité</li>
+      </ul>
+    </div>
+
+    <div class="info-block">
+      <p style="color:#faaa1e;font-weight:500;margin-bottom:10px;">⚠️ Collectées par des services tiers intégrés</p>
+      <ul class="item-list">
+        <li>Google AdMob — identifiant publicitaire anonymisé (annonces avec récompense)</li>
+        <li>Google Play Billing — validation des achats in-app (traitement par Google)</li>
+        <li>OpenWeatherMap API — localisation approximative si activée (météo temps réel)</li>
+        <li>ExchangeRate API — aucune donnée personnelle transmise (taux de change)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>Finalité des données</h2>
+    </div>
+    <p>Les données sont utilisées exclusivement pour :</p>
+    <ul class="item-list">
+      <li>Personnaliser l'expérience utilisateur (passeport, thème)</li>
+      <li>Gérer l'accès aux fonctionnalités premium</li>
+      <li>Afficher des publicités avec récompense via Google AdMob</li>
+      <li>Afficher les données météo et de change en temps réel</li>
+    </ul>
+    <p style="margin-top:14px;">Aucune donnée n'est utilisée à des fins de profilage commercial ou revendue à des tiers.</p>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>Publicités (Google AdMob)</h2>
+    </div>
+    <p>TravelScope intègre Google AdMob pour proposer des publicités avec récompense. En regardant une publicité, vous obtenez un accès temporaire de 5 minutes à toutes les catégories d'information.</p>
+    <div class="info-block">
+      <p>Google AdMob peut utiliser votre identifiant publicitaire Android (GAID) pour personnaliser les annonces. Vous pouvez désactiver cette personnalisation dans les paramètres de votre appareil :</p>
+      <p style="margin-top:8px;color:var(--text);font-weight:500;">Paramètres → Google → Annonces → Désactiver la personnalisation</p>
+    </div>
+    <p>Pour plus d'informations sur les pratiques de Google : <strong>policies.google.com/privacy</strong></p>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2>Achats in-app</h2>
+    </div>
+    <p>TravelScope propose un accès premium à 2,99€ en paiement unique, sans abonnement. Les transactions sont entièrement gérées par <strong>Google Play Billing</strong>. Nous n'avons accès à aucune donnée bancaire ou de paiement.</p>
+    <div class="highlight-row">
+      <span class="highlight-pill">✓ Paiement unique</span>
+      <span class="highlight-pill">✓ Sans abonnement</span>
+      <span class="highlight-pill">✓ Sans renouvellement automatique</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2>Conservation des données</h2>
+    </div>
+    <p>Les données stockées localement (préférences, statut premium) restent sur votre appareil et sont supprimées automatiquement lors de la désinstallation de l'application. Les données traitées par Google sont soumises à la politique de conservation de Google.</p>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <h2>Partage des données</h2>
+    </div>
+    <p>TravelScope <strong>ne vend, ne loue et ne partage pas</strong> vos données personnelles avec des tiers, à l'exception des services tiers intégrés listés en section 2, chacun soumis à sa propre politique de confidentialité.</p>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">8</div>
+      <h2>Vos droits (RGPD)</h2>
+    </div>
+    <p>Conformément au Règlement Général sur la Protection des Données, vous disposez des droits suivants :</p>
+    <ul class="item-list">
+      <li><strong>Droit d'accès</strong> — consulter les données vous concernant</li>
+      <li><strong>Droit de rectification</strong> — corriger des données inexactes</li>
+      <li><strong>Droit à l'effacement</strong> — demander la suppression de vos données</li>
+      <li><strong>Droit d'opposition</strong> — vous opposer au traitement de vos données</li>
+      <li><strong>Droit à la portabilité</strong> — récupérer vos données dans un format lisible</li>
+    </ul>
+    <p style="margin-top:14px;">Contactez-nous via l'adresse ci-dessous. Délai de réponse : 30 jours maximum.</p>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">9</div>
+      <h2>Sécurité</h2>
+    </div>
+    <p>Toutes les communications réseau de TravelScope utilisent le protocole <strong>HTTPS</strong>. Aucune donnée sensible n'est transmise en clair. Les préférences locales sont stockées dans le stockage interne sécurisé de l'appareil Android.</p>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">10</div>
+      <h2>Modifications de cette politique</h2>
+    </div>
+    <p>Nous nous réservons le droit de mettre à jour cette politique de confidentialité. En cas de modification, la date en haut de cette page sera actualisée. Nous vous encourageons à la consulter régulièrement.</p>
+  </section>
+
+  <div class="contact-block">
+    <h3>Une question sur vos données ?</h3>
+    <p>Notre développeur vous répond dans les meilleurs délais.</p>
+    <a href="mailto:contact@travelscope-app.fr" class="contact-email">contact@travelscope-app.fr</a>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 TravelScope — Mickaël Bourcier · Tous droits réservés<br>
+  <span style="opacity:0.5;font-size:11px;">com.travelscopev2.app · Version 1.0</span>
+</footer>
+
+</body>
+</html>
